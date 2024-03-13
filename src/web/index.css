@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Use a font of your choice */
+@font-face {
+  font-family: Inter;
+  src: url("../assets/fonts/Inter.ttf");
+}
+
+* {
+  font-family: Inter;
+}
+
+body {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+/* This makes the custom topbar draggable */
+#drag-region {
+  -webkit-app-region: drag;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+/* TailwindCSS defaults */
+@layer base {
+  .theme-dark {
+    --color-text: #bfbfbf;
+    --color-background: #161718;
+    --color-card: #252729;
+    --color-border: #2c2c2c;
+    --color-bg-hover: #2c2c2c;
+  }
+  .theme-light {
+    --color-text: rgb(22, 22, 22);
+    --color-background: #eeeeee;
+    --color-card: rgb(223, 223, 223);
+    --color-border: #cccccc;
+    --color-bg-hover: #dddddd;
+  }
+  .theme-calm {
+    --color-text: #000000;
+    --color-background: hsl(244, 94%, 79%);
+    --color-card: #d3c7ff;
+    --color-border: #8772fc;
+    --color-bg-hover: rgb(197, 178, 255);
+  }
+}
