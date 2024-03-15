@@ -1,21 +1,20 @@
-import React from "react";
 import { Link, Outlet, createRootRoute } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from '@tanstack/router-devtools'
+import { TanStackRouterDevtools } from "@tanstack/router-devtools";
+import type React from "react";
 import { Layout } from "../components";
 
 /** This is not needed but it's just one simple way to add margin to all pages for example */
-const PageWrapper = ({ children }: { children: React.ReactNode }) => 
-  <div className="m-4 w-full no-scrollbar">
-    {children}
-  </div>
+const PageWrapper = ({ children }: { children: React.ReactNode }) => (
+  <div className="m-4 w-full no-scrollbar">{children}</div>
+);
 
 export const Route = createRootRoute({
   component: () => (
     <Layout>
-      <div className='flex border-t border-border h-full w-full'>
+      <div className="flex border-t border-border h-full w-full">
         <div className="px-3 gap-3 flex flex-col w-[10rem] border-r border-border">
-          <div className='flex flex-col w-28 mt-3'>
-            <div className='flex flex-col gap-2 pl-1'>
+          <div className="flex flex-col w-28 mt-3">
+            <div className="flex flex-col gap-2 pl-1">
               <Link to="/" className="[&.active]:font-bold">
                 Home
               </Link>
@@ -32,6 +31,7 @@ export const Route = createRootRoute({
           <Outlet />
         </PageWrapper>
       </div>
+      <TanStackRouterDevtools />
     </Layout>
   ),
 });

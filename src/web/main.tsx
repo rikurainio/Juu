@@ -1,9 +1,9 @@
-import React from "react";
-import t, { queryClient, trpcClient } from "@shared/config";
+import { enableReactTracking } from "@legendapp/state/config/enableReactTracking";
 import { configureObservablePersistence } from "@legendapp/state/persist";
 import { ObservablePersistLocalStorage } from "@legendapp/state/persist-plugins/local-storage";
-import { enableReactTracking } from "@legendapp/state/config/enableReactTracking";
+import t, { queryClient, trpcClient } from "@shared/config";
 import { QueryClientProvider } from "@tanstack/react-query";
+import React from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 
@@ -11,8 +11,7 @@ import "./index.css";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 
-const router = createRouter({ routeTree,
-});
+const router = createRouter({ routeTree });
 
 declare module "@tanstack/react-router" {
   interface Register {
@@ -31,7 +30,6 @@ configureObservablePersistence({
 enableReactTracking({
   auto: true,
 });
-
 
 createRoot(document.getElementById("app") as Element).render(
   <React.StrictMode>

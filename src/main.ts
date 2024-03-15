@@ -1,8 +1,8 @@
-import { BrowserWindow, app } from "electron";
-import { createIPCHandler } from "electron-trpc/main";
+import { join } from "path";
 import { createContext } from "@src/shared/context";
 import { appRouter } from "@src/shared/routers/_app";
-import { join } from "path";
+import { BrowserWindow, app } from "electron";
+import { createIPCHandler } from "electron-trpc/main";
 
 // set the app name independent of package.json name
 app.setName("juu");
@@ -34,12 +34,12 @@ const createWindow = () => {
   if (import.meta.env.DEV) {
     mainWindow.loadURL("http://localhost:5173/");
   } else {
-    const path = `file://${app.getAppPath()}/dist/renderer/index.html#/`
-    mainWindow.loadURL(path)
+    const path = `file://${app.getAppPath()}/dist/renderer/index.html#/`;
+    mainWindow.loadURL(path);
   }
 
   /** Devtools */
- // mainWindow.webContents.openDevTools({ mode: "detach" });
+  // mainWindow.webContents.openDevTools({ mode: "detach" });
 };
 
 app.whenReady().then(() => {
