@@ -1,6 +1,6 @@
 # Usage
 - clone
-- npm install (do not use pnpm/yarn)
+- npm install (do not use pnpm/yarn) (remember to install ./drizzle-helper package modules too)
 - package.json includes scripts for drizzle-kit operations, building, etc.
 
 # Decisions
