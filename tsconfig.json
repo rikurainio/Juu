@@ -9,6 +9,7 @@
     "jsx": "react-jsx",
     "strict": true,
     "baseUrl": ".",
+    "outDir": "dist",
     "paths": {
       "@src/*": ["src/*"],
       "@shared/*": ["src/shared/*"],
