@@ -1,6 +1,6 @@
-import { inferAsyncReturnType } from "@trpc/server";
+import type { inferAsyncReturnType } from "@trpc/server";
 import { BrowserWindow } from "electron";
-import {db} from "./storage";
+import { db } from "./db";
 
 // attach variables and other state you plan on making
 // accessible in your procedures
