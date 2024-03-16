@@ -1,7 +1,10 @@
 # Usage
-- clone
-- npm install (do not use pnpm/yarn) (remember to install ./drizzle-helper package modules too)
-- package.json includes scripts for drizzle-kit operations, building, etc.
+`git clone https://github.com/rikurainio/Juu.git`
+`npm install` 
+(I recommend using npm for now) 
+(remember to install ./drizzle-helper package modules too)
+
+`package.json` includes scripts for drizzle-kit operations, building, linting, etc.
 
 # Decisions
 - Build-tooling:  [Electron-Vite](https://electron-vite.org/ "Electron-Vite"), [Vite](https://vitejs.dev/ "Vite")
@@ -26,3 +29,7 @@ properly. If I compiled better-sqlite3 for electron, drizzle-kit would not work 
 - Move sqlite.db to somewhere else than the root. Maybe to userData. Also configure where this db file resides on the built app.
 
 - Figure out better way to handle initial routing on built app. As a quick fix the app manually navigates the user to the root path on initial mount.
+
+# Contributing
+I'd love to work on this template with people. I have a lot to learn about Electron and the tooling around it, and native modules.
+If you have suggestions feel free to contact, make a PR.
