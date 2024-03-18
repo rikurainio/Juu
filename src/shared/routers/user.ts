@@ -19,7 +19,7 @@ export const userRouter = router({
   get: publicProcedure
     .input(
       z.object({
-        id: z.string(),
+        id: z.number(),
       }),
     )
     .query(async ({ ctx, input }) => {
@@ -31,11 +31,12 @@ export const userRouter = router({
   update: publicProcedure
     .input(
       z.object({
-        id: z.string(),
+        id: z.number(),
         newName: z.string(),
       }),
     )
     .mutation(async ({ ctx, input }) => {
+      console.log('upd')
       await db
         .update(users)
         .set({
@@ -46,7 +47,7 @@ export const userRouter = router({
   delete: publicProcedure
     .input(
       z.object({
-        id: z.string(),
+        id: z.number(),
       }),
     )
     .mutation(async ({ ctx, input }) => {
