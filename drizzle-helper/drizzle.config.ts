@@ -1,5 +1,5 @@
 import type { Config } from "drizzle-kit";
-import path from "path";
+import path from "node:path";
 
 /** DB_LOCATION is the location where the electron app stores user data:
  * app.getPath('userData')
