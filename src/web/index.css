@@ -31,21 +31,21 @@ body {
 
 /* TailwindCSS defaults */
 @layer base {
-  .theme-dark {
+  .dark {
     --color-text: #bfbfbf;
     --color-background: #161718;
     --color-card: #252729;
     --color-border: #2c2c2c;
     --color-bg-hover: #2c2c2c;
   }
-  .theme-light {
+  .light {
     --color-text: rgb(22, 22, 22);
     --color-background: #eeeeee;
     --color-card: rgb(223, 223, 223);
     --color-border: #cccccc;
     --color-bg-hover: #dddddd;
   }
-  .theme-calm {
+  .calm {
     --color-text: #000000;
     --color-background: hsl(244, 94%, 79%);
     --color-card: #d3c7ff;
