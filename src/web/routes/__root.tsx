@@ -1,7 +1,7 @@
 import { Link, Outlet, createRootRoute } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import type React from "react";
-import { Layout } from "../components";
+import Layout from "../components/layout";
 
 /** This is not needed but it's just one simple way to add margin to all pages for example */
 const PageWrapper = ({ children }: { children: React.ReactNode }) => (
