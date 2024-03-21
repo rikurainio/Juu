@@ -15,7 +15,7 @@
 - Styling: [TailwindCSS](https://tailwindcss.com/ "TailwindCSS")
 - Process communication: [Electron-tRPC](https://github.com/jsonnull/electron-trpc "Electron-tRPC"), [tRPC](https://trpc.io/ "tRPC")
 - Routing: [TanStack Router](http:/https://tanstack.com/router/latest/docs/framework/react/overview/ "TanStack Router")
-- State management: [TanStack Query](https://tanstack.com/query/latest/docs/framework/react/overview "TanStack Query"), [Legendapp/state](https://legendapp.com/open-source/state/intro/introduction/ "Legendapp/state")
+- State management: [TanStack Query](https://tanstack.com/query/latest/docs/framework/react/overview "TanStack Query")
 - Local Database:  [Better-sqlite3](https://github.com/WiseLibs/better-sqlite3 "Better-sqlite3")
 - ORM: [Drizzle](https://orm.drizzle.team/ "Drizzle")
 - Linting, formatting: [Biome](https://biomejs.dev/ "Biome")
