@@ -74,7 +74,6 @@
     "drizzle-orm": "^0.29.1",
     "tailwind-merge": "^2.2.1",
     "electron-trpc": "^0.5.2",
-    "react-error-boundary": "^4.0.12",
     "react-dom": "^18.2.0",
     "react": "^18.2.0",
     "sort-by": "^1.2.0",
