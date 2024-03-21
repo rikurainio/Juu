@@ -63,7 +63,6 @@
     }
   },
   "dependencies": {
-    "@legendapp/state": "^2.1.4",
     "@phosphor-icons/react": "^2.0.15",
     "@tanstack/react-query": "^4.0.0",
     "@tanstack/react-router": "^1.12.12",
