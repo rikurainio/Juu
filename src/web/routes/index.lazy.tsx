@@ -1,7 +1,7 @@
-import { FloppyDisk, PencilSimple, X } from "@phosphor-icons/react";
-import t from "@src/shared/config";
-import { createLazyFileRoute } from "@tanstack/react-router";
 import React from "react";
+import { FloppyDisk, PencilSimple, X } from "@phosphor-icons/react";
+import { createLazyFileRoute } from "@tanstack/react-router";
+import t from "@src/shared/config";
 
 export const Route = createLazyFileRoute("/" as never)({
   component: Index,
@@ -54,8 +54,11 @@ function Index() {
             </button>
           </div>
           <div className="flex flex-wrap mt-3 gap-3">
-            {users?.map(u => (
-              <div key={u.id} className="flex max-w-xs items-center gap-3 bg-card border border-border rounded px-1 py-[0.1rem]">
+            {users?.map((u) => (
+              <div
+                key={u.id}
+                className="flex max-w-xs items-center gap-3 bg-card border border-border rounded px-1 py-[0.1rem]"
+              >
                 <div className="w-full">
                   <p className="w-20 truncate">
                     <span className="text-xs pr-1">{u.id}</span>

@@ -1,8 +1,8 @@
-import { join } from "path";
-import { createContext } from "@src/shared/context";
+import { join } from "node:path";
 import { appRouter } from "@src/shared/routers/_app";
-import { BrowserWindow, app } from "electron";
+import { createContext } from "@src/shared/context";
 import { createIPCHandler } from "electron-trpc/main";
+import { BrowserWindow, app } from "electron";
 
 // set the app name independent of package.json name
 app.setName("juu");

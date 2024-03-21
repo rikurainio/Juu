@@ -36,7 +36,7 @@ export const userRouter = router({
       }),
     )
     .mutation(async ({ ctx, input }) => {
-      console.log('upd')
+      console.log("upd");
       await db
         .update(users)
         .set({

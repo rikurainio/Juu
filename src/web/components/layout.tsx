@@ -1,10 +1,10 @@
-import { Minus, Square, X } from "@phosphor-icons/react";
-import t from "@shared/config";
-import { useRouter } from "@tanstack/react-router";
 import React from "react";
+import type { Theme } from "../lib/types";
+import { Minus, Square, X } from "@phosphor-icons/react";
+import { useRouter } from "@tanstack/react-router";
 import { useTheme } from "./providers";
 import { THEMES } from "../lib/constants";
-import type { Theme } from "../lib/types";
+import t from "@shared/config";
 
 type LayoutProps = {
   children?: React.ReactNode;
@@ -15,7 +15,7 @@ const CustomTopBar = () => {
   const { mutate: minimizeWindow } = t.window.minimize.useMutation();
   const { mutate: maximizeWindow } = t.window.maximize.useMutation();
   const { mutate: closeWindow } = t.window.closeWindow.useMutation();
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme();
 
   return (
     <div className="flex w-full h-10 items-center">
@@ -37,11 +37,13 @@ const CustomTopBar = () => {
           <select
             defaultValue={theme}
             className="bg-transparent outline-none flex items-center gap-[.1rem] px-2 py-1 truncate"
-            onChange={e => setTheme(e.target.value as Theme)}
+            onChange={(e) => setTheme(e.target.value as Theme)}
           >
-            {THEMES.map((t: Theme) =>
-              <option className="bg-card" key={t} value={t}>{t}</option>
-            )}
+            {THEMES.map((t: Theme) => (
+              <option className="bg-card" key={t} value={t}>
+                {t}
+              </option>
+            ))}
           </select>
         </div>
         <button
