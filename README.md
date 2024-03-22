@@ -1,3 +1,6 @@
+# Juu
+![UI image](/src/assets/images/juu-github-media.png?raw=true)
+
 # Usage
 `git clone https://github.com/rikurainio/Juu.git`
 `npm install` 
