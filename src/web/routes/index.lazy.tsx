@@ -65,7 +65,7 @@ function Index() {
                     {u.name}
                   </p>
                 </div>
-                <div className="flex">
+                <div className="flex gap-1">
                   <button
                     type="button"
                     onClick={() => setEditableUser(u.id)}
