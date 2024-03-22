@@ -32,8 +32,6 @@ Currently there is seperate helper package called drizzle-helper, with
 its own better-sqlite3 module. This was the only way I got drizzle-kit to work
 properly. If I compiled better-sqlite3 for electron, drizzle-kit would not work properly anymore.
 
-- Move sqlite.db to somewhere else than the root. Maybe to userData. Also configure where this db file resides on the built app.
-
 - Figure out better way to handle initial routing on built app. As a quick fix the app manually navigates the user to the root path on initial mount.
 
 # Contributing
