@@ -10,6 +10,8 @@ app.setName("juu");
 const createWindow = () => {
   const mainWindow = new BrowserWindow({
     frame: false, // Set to true if you want to use the default frame
+    width: 1280,
+    height: 720,
     webPreferences: {
       devTools: true,
       sandbox: false,
