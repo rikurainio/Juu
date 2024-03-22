@@ -45,11 +45,11 @@ body {
     --color-border: #cccccc;
     --color-bg-hover: #dddddd;
   }
-  .calm {
+  .purple {
     --color-text: #000000;
-    --color-background: hsl(244, 94%, 79%);
+    --color-background: hsl(244, 60%, 73%);
     --color-card: #d3c7ff;
-    --color-border: #8772fc;
+    --color-border: #6f61c0;
     --color-bg-hover: rgb(197, 178, 255);
   }
 }
