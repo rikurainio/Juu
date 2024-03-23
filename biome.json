@@ -21,6 +21,7 @@
     "attributePosition": "auto",
     "lineEnding": "crlf",
     "indentStyle": "space",
-    "indentWidth": 2
+    "indentWidth": 2,
+    "ignore": ["src/web/routeTree.gen.ts"]
   }
 }
