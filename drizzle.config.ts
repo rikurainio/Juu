@@ -1,4 +1,3 @@
-import type { Config } from "drizzle-kit";
 import path from "node:path";
 
 /** DB_LOCATION is the location where the electron app stores user data:
@@ -15,7 +14,7 @@ import path from "node:path";
 
 export default {
   dbCredentials: { url: path.join(process.env.DB_LOCATION as string, 'db.sqlite')},
-  schema: "../src/shared/schema/*.ts",
-  driver: "better-sqlite",
+  schema: "./src/shared/db/schema/*.ts",
+  dialect: "sqlite",
   out: "../.drizzle",
-} satisfies Config;
+}
