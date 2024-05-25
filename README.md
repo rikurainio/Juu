@@ -5,10 +5,6 @@
 `git clone https://github.com/rikurainio/Juu.git`
 `npm install` 
 
-
-(I recommend using npm for now) 
-(remember to install ./drizzle-helper package modules too)
-
 `package.json` includes scripts for drizzle-kit operations, building, linting, etc.
 
 # Stack
