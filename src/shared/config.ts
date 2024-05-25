@@ -1,7 +1,7 @@
 import { QueryClient } from "@tanstack/react-query";
 import { createTRPCReact } from "@trpc/react-query";
 import { ipcLink } from "electron-trpc/renderer";
-import type { AppRouter } from "./routers/_app";
+import type { AppRouter } from "./routers/app.router";
 
 const t = createTRPCReact<AppRouter>();
 

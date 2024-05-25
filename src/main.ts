@@ -1,5 +1,5 @@
 import { join } from "node:path";
-import { appRouter } from "@src/shared/routers/_app";
+import { appRouter } from "@src/shared/routers/app.router";
 import { createContext } from "@src/shared/context";
 import { createIPCHandler } from "electron-trpc/main";
 import { BrowserWindow, app } from "electron";

@@ -1,8 +1,8 @@
-import { publicProcedure, router } from "@src/trpc";
-import { shell } from "electron";
 import pkg from "../../../package.json";
-import { userRouter } from "./user";
-import { windowRouter } from "./window";
+import { publicProcedure, router } from "@src/trpc";
+import { windowRouter } from "./window.router";
+import { userRouter } from "./user.router";
+import { shell } from "electron";
 
 export const appRouter = router({
   window: windowRouter,

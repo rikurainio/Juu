@@ -1,8 +1,8 @@
 import { publicProcedure, router } from "@src/trpc";
+import { users } from "../db/schema/index.schema";
 import { eq } from "drizzle-orm";
-import { z } from "zod";
 import { db } from "../db/db";
-import { users } from "../db/schema";
+import { z } from "zod";
 
 export const userRouter = router({
   create: publicProcedure
@@ -16,6 +16,7 @@ export const userRouter = router({
         name: input.name,
       });
     }),
+
   get: publicProcedure
     .input(
       z.object({
@@ -25,9 +26,11 @@ export const userRouter = router({
     .query(async ({ ctx, input }) => {
       await db.select().from(users).where(eq(users.id, input.id));
     }),
+
   getAll: publicProcedure.query(async ({ ctx }) => {
     return await db.select().from(users);
   }),
+
   update: publicProcedure
     .input(
       z.object({
@@ -44,6 +47,7 @@ export const userRouter = router({
         })
         .where(eq(users.id, input.id));
     }),
+
   delete: publicProcedure
     .input(
       z.object({
@@ -53,6 +57,7 @@ export const userRouter = router({
     .mutation(async ({ ctx, input }) => {
       await db.delete(users).where(eq(users.id, input.id));
     }),
+    
   deleteAll: publicProcedure.mutation(async ({ ctx }) => {
     await db.delete(users);
   }),
