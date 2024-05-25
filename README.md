@@ -9,7 +9,6 @@
 (I recommend using npm for now) 
 (remember to install ./drizzle-helper package modules too)
 
-
 `package.json` includes scripts for drizzle-kit operations, building, linting, etc.
 
 # Decisions
@@ -24,14 +23,6 @@
 - Linting, formatting: [Biome](https://biomejs.dev/ "Biome")
 
 # Todo
-- Use pnpm instead of npm. Configure pnpm to not share better-sqlite3 module
-since drizzle-kit does not properly work with the version that is compiled for electron
-
-- Figure out better way to implement drizzle-orm and drizzle-kit.
-Currently there is seperate helper package called drizzle-helper, with
-its own better-sqlite3 module. This was the only way I got drizzle-kit to work
-properly. If I compiled better-sqlite3 for electron, drizzle-kit would not work properly anymore.
-
 - Figure out better way to handle initial routing on built app. As a quick fix the app manually navigates the user to the root path on initial mount.
 
 # Contributing
