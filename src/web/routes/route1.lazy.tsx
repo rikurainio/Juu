@@ -5,5 +5,7 @@ export const Route = createLazyFileRoute("/example" as never)({
 });
 
 function Example() {
-  return <div>example route 1</div>;
+  return (
+    <div>Nothing here... yet!</div>
+  )
 }
