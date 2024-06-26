@@ -5,10 +5,10 @@
   "author": {
     "email": "rainioriku@gmail.com",
     "name": "Riku Rainio",
-    "url": "https://www.google.com"
+    "url": "https://github.com/rikurainio"
   },
   "repository": {
-    "url": ""
+    "url": "https://github.com/rikurainio/Juu"
   },
   "main": "dist/main/main.js",
   "scripts": {
@@ -17,17 +17,13 @@
     "makeroutes": "npx tsr generate",
     "prebuild": "electron-vite build",
     "build": "pnpm run prebuild && pnpm run makeroutes && electron-builder",
-    "db:push": "pnpm db:drizzler && drizzle-kit push && pnpm db:insanity",
+    "db:push": "drizzle-kit push",
     "db:generate": "drizzle-kit generate",
-    "db:insanity": "pnpm rm:modules && pnpm i",
-    "db:drizzler": "pnpm rm:bs3 && pnpm uninstall drizzle-kit && pnpm install drizzle-kit && pnpm install better-sqlite3",
-    "rm:modules": "rm -rf node_modules",
-    "rm:bs3": "rm -rf node_modules/better-sqlite3 node_modules/bindings node_modules/prebuild-install",
-    "install:bs3": "pnpm install better-sqlite3",
+    "rebuild:electron" :".\\node_modules\\.bin\\electron-rebuild.cmd -f",
+    "rebuild": "npm rebuild",
     "format": "npx @biomejs/biome format ./src",
     "lint": "npx @biomejs/biome lint ./src",
-    "check": "npx @biomejs/biome check --apply ./src",
-    "postinstall": "electron-rebuild"
+    "check": "npx @biomejs/biome check --apply ./src"
   },
   "build": {
     "appId": "com.juu.app",
