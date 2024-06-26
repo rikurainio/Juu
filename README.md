@@ -1,6 +1,3 @@
-# Juu
-![UI image](/src/assets/images/juu-github-media.png?raw=true)
-
 # Usage
 `pnpm install` <br>
 `pnpm run dev`
