@@ -16,5 +16,5 @@ export default {
   dbCredentials: { url: path.join(process.env.DB_LOCATION as string, 'db.sqlite')},
   schema: "./src/shared/db/schema/*.schema.ts",
   dialect: "sqlite",
-  out: "../.drizzle",
+  out: ".drizzle",
 }
