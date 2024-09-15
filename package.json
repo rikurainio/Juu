@@ -13,7 +13,7 @@
   "main": "dist/main/main.js",
   "scripts": {
     "start": "electron-vite preview",
-    "dev": "electron-vite dev",
+    "dev": "electron-vite dev --watch",
     "makeroutes": "npx tsr generate",
     "prebuild": "electron-vite build",
     "build": "pnpm run prebuild && pnpm run makeroutes && electron-builder",

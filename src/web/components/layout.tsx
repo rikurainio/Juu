@@ -1,7 +1,7 @@
 import React from "react";
 import type { Theme } from "../lib/types";
 import { Minus, Square, X } from "@phosphor-icons/react";
-import { useRouter } from "@tanstack/react-router";
+import { Link, useRouter } from "@tanstack/react-router";
 import { useTheme } from "./providers";
 import { THEMES } from "../lib/constants";
 import t from "@shared/config";
@@ -10,7 +10,23 @@ type LayoutProps = {
   children?: React.ReactNode;
 };
 
-const CustomTopBar = () => {
+interface SideNavProps extends React.HTMLAttributes<HTMLDivElement> {}
+interface TopBarProps extends React.HTMLAttributes<HTMLDivElement> {}
+
+const SideNav = ({ className, ...props }: SideNavProps) => {
+  return (
+    <div {...props} className="px-3 pt-2 flex flex-col gap-3">
+      <Link to="/" className="[&.active]:font-bold">
+        Home
+      </Link>
+      <Link to="/example" className="[&.active]:font-bold">
+        Example
+      </Link>
+    </div>
+  );
+};
+
+const TopBar = ({ className, ...props }: TopBarProps) => {
   const { data: appVer } = t.version.useQuery();
   const { mutate: minimizeWindow } = t.window.minimize.useMutation();
   const { mutate: maximizeWindow } = t.window.maximize.useMutation();
@@ -18,7 +34,7 @@ const CustomTopBar = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <div className="flex w-full h-10 items-center">
+    <div {...props} className="flex w-full h-10 items-center">
       <div id="drag-region" className="flex items-center px-3 w-full">
         <span className="font-bold">
           Juu <span className="font-extralight text-sm">{appVer}</span>
@@ -85,11 +101,17 @@ export default function Layout({ children }: LayoutProps) {
   }, [router.navigate, router.state.location.pathname]);
 
   return (
-    /** Using a layout is not a must. You can also disable the custom topbar
+    /** Using a custom layout is not a must. You can also disable the custom topbar
      *  and enable "frame" property for the window in main.ts */
-    <div className="h-screen">
-      <CustomTopBar />
-      {children}
+    <div className="grid grid-cols-1 w-full h-screen">
+      <TopBar className="h-[5vh]" />
+
+      <div className="grid grid-cols-12 w-full h-[95vh]">
+        <SideNav className="col-span-1" />
+        <div className="col-span-11 overflow-y-scroll w-full p-3 rounded-t-lg bg-background">
+          {children}
+        </div>
+      </div>
     </div>
   );
 }

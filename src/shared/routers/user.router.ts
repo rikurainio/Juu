@@ -56,7 +56,7 @@ export const userRouter = router({
     .mutation(async ({ ctx, input }) => {
       await db.delete(users).where(eq(users.id, input.id));
     }),
-    
+
   deleteAll: publicProcedure.mutation(async ({ ctx }) => {
     await db.delete(users);
   }),
